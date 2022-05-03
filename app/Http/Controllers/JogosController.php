@@ -13,7 +13,7 @@ class JogosController extends Controller
     $id="1";
     $nome="Victor";
      
-    return view('jogos',['id'=>$id,'nome'=>$nome]);
+    return view('jogos.index',['id'=>$id,'nome'=>$nome]);
   
     }
 }
