@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Jogo;
 
 class JogosController extends Controller
 {
@@ -10,10 +11,9 @@ class JogosController extends Controller
 
     //PASSANDO PARÂMETROS
 
-    $id="1";
-    $nome="Victor";
-     
-    return view('jogos.index',['id'=>$id,'nome'=>$nome]);
+    $jogos=Jogo::all();
+     //dd($jogos);
+    return view('jogos.index',['jogos'=>$jogos]);
   
     }
 }
