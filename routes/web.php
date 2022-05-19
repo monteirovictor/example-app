@@ -14,18 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+//Criando um conjunto de Rotas
 
-// Route::view('/jogos','jogos');
+Route::prefix('jogos')->group(function(){
+    Route::get('/',[JogosController::class,'index'])->name('jogos-index');
+    Route::get('/create',[JogosController::class,'create'])->name('jogos-create');
+    Route::post('/',[JogosController::class,'store'])->name('jogos-store');
+});
 
-//passando parametros estáticos
-//Route::view('/jogos','jogos',['name'=>'GTA']);
-
-//parametros dinamicos
-// Route::get('/jogos/{name?}',function($name =null){
-//     return view('jogos',['nomejogo' =>$name]);
-// });
-
-Route::get('/jogos',[JogosController::class,'index']);
