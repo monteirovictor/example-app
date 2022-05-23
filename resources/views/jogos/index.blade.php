@@ -16,6 +16,7 @@
             <th>Categoria</th>
             <th>Ano de Criação</th>
             <th>Valor</th>
+            <th>...</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,8 @@
             <td>{{$jogo->categoria}}</td>
             <td>{{$jogo->ano_criacao}}</td>
             <td>{{$jogo->valor}}</td>
+            <td> <a  class="btn btn-primary" href="{{route('jogos-edit',['id'=>$jogo->id])}}" role="button">editar</a></td>
+            
         </tr>
         @endforeach
     </tbody>
