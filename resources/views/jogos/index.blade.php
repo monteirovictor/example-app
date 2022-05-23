@@ -4,6 +4,10 @@
 
 
 @section('content')
+<div class="col-md-10"></div>
+<div class="col-md-2">
+    <a name="" id="" class="btn btn-primary" href="{{route('jogos-create')}}" role="button">Cadastrar</a>
+</div>
 <table class="table">
     <thead>
         <tr>

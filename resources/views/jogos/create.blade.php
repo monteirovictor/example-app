@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label for="">Ano de Criação</label>
-            <input type="number" name="anocriacao" id="anocriacao" class="form-control" placeholder="" aria-describedby="">
+            <input type="number" name="ano_criacao" id="ano_criacao" class="form-control" placeholder="" aria-describedby="">
         </div>
         <div class="form-group">
             <label for="">Valor</label>
