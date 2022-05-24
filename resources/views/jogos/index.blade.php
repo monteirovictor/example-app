@@ -22,12 +22,19 @@
     <tbody>
         @foreach($jogos as $jogo)
         <tr>
-            <td>{{$jogo->id}}</td>
-            <td>{{$jogo->nome}}</td>
-            <td>{{$jogo->categoria}}</td>
-            <td>{{$jogo->ano_criacao}}</td>
-            <td>{{$jogo->valor}}</td>
-            <td> <a  class="btn btn-primary" href="{{route('jogos-edit',['id'=>$jogo->id])}}" role="button">editar</a></td>
+            <th>{{$jogo->id}}</th>
+            <th>{{$jogo->nome}}</th>
+            <th>{{$jogo->categoria}}</th>
+            <th>{{$jogo->ano_criacao}}</th>
+            <th>{{$jogo->valor}}</th>
+            <th class="d-flex"> 
+                <a  class="btn btn-primary" href="{{route('jogos-edit',['id'=>$jogo->id])}}" role="button">editar</a>
+                <form action="{{route('jogos-destroy',['id'=>$jogo->id])}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Deletar</button>
+                </form>
+            </th>
             
         </tr>
         @endforeach
